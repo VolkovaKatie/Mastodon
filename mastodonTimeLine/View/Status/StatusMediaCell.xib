@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mediaCellID" id="kb4-Ie-68o" customClass="StatusMediaCell" customModule="mastodonTimeLine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kb4-Ie-68o" id="NOv-Aa-ag9">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="69A-v4-TDB">
+                        <rect key="frame" x="112.5" y="-0.5" width="150" height="150.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="D64-qG-dZp"/>
+                            <constraint firstAttribute="height" constant="150" id="K2e-9T-cRY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.02235663152" green="0.0502900945" blue="0.13605561999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="69A-v4-TDB" firstAttribute="centerY" secondItem="NOv-Aa-ag9" secondAttribute="centerY" id="9ED-Sp-2zW"/>
+                    <constraint firstItem="69A-v4-TDB" firstAttribute="centerX" secondItem="NOv-Aa-ag9" secondAttribute="centerX" id="AbU-At-pnS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mediaImageView" destination="69A-v4-TDB" id="7c7-lc-GYA"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

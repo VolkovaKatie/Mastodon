@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22122F5E2080E11700609159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122F5D2080E11700609159 /* AppDelegate.swift */; };
+		22122F602080E11700609159 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122F5F2080E11700609159 /* TimelineView.swift */; };
+		22122F632080E11700609159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22122F612080E11700609159 /* Main.storyboard */; };
+		22122F662080E11700609159 /* mastodonTimeLine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22122F642080E11700609159 /* mastodonTimeLine.xcdatamodeld */; };
+		22122F682080E11700609159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22122F672080E11700609159 /* Assets.xcassets */; };
+		22122F6B2080E11700609159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22122F692080E11700609159 /* LaunchScreen.storyboard */; };
+		22122F762080E11800609159 /* mastodonTimeLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122F752080E11800609159 /* mastodonTimeLineTests.swift */; };
+		22122F842080E20800609159 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122F832080E20800609159 /* Status.swift */; };
+		22122F862080E22100609159 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122F852080E22100609159 /* NetworkService.swift */; };
+		22122F882080E46300609159 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122F872080E46300609159 /* Account.swift */; };
+		22D495FB20832A900003345F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D495FA20832A900003345F /* String.swift */; };
+		22D495FD2083452A0003345F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D495FC2083452A0003345F /* API.swift */; };
+		22F2EBA3208109780049F22F /* TimeLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBA2208109780049F22F /* TimeLineViewModel.swift */; };
+		22F2EBA52081E1300049F22F /* TimelineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2EBA42081E1300049F22F /* TimelineView.xib */; };
+		22F2EBA92081FD190049F22F /* TimeLineCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBA82081FD190049F22F /* TimeLineCellViewModel.swift */; };
+		22F2EBAB208220550049F22F /* TimeLineCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2EBAA208220550049F22F /* TimeLineCellView.xib */; };
+		22F2EBAD208220680049F22F /* TimeLineCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBAC208220680049F22F /* TimeLineCellView.swift */; };
+		22F2EBB220824C980049F22F /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2EBB120824C980049F22F /* StatusView.xib */; };
+		22F2EBB4208254720049F22F /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBB3208254720049F22F /* StatusView.swift */; };
+		22F2EBB8208257170049F22F /* StatusHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2EBB7208257170049F22F /* StatusHeaderCell.xib */; };
+		22F2EBBA208257260049F22F /* StatusHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBB9208257260049F22F /* StatusHeaderCell.swift */; };
+		22F2EBBC208257420049F22F /* StatusMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2EBBB208257420049F22F /* StatusMediaCell.xib */; };
+		22F2EBBE2082575B0049F22F /* StatusMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBBD2082575B0049F22F /* StatusMediaCell.swift */; };
+		22F2EBC020826E000049F22F /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBBF20826E000049F22F /* Attachment.swift */; };
+		22F2EBC3208324A90049F22F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBC2208324A90049F22F /* Date.swift */; };
+		22F2EBC5208325700049F22F /* Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EBC4208325700049F22F /* Convert.swift */; };
+		4BA3A5E7A59E2B1CE2AA98C8 /* Pods_mastodonTimeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B79081F554B49759C5397FD /* Pods_mastodonTimeLineTests.framework */; };
+		E5C126A79ED1F41F62FA0706 /* Pods_mastodonTimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0895EEE6531B717A8C3FF893 /* Pods_mastodonTimeLine.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22122F722080E11800609159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22122F522080E11700609159 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22122F592080E11700609159;
+			remoteInfo = mastodonTimeLine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0895EEE6531B717A8C3FF893 /* Pods_mastodonTimeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mastodonTimeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22122F5A2080E11700609159 /* mastodonTimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mastodonTimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22122F5D2080E11700609159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22122F5F2080E11700609159 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		22122F622080E11700609159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22122F652080E11700609159 /* mastodonTimeLine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mastodonTimeLine.xcdatamodel; sourceTree = "<group>"; };
+		22122F672080E11700609159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22122F6A2080E11700609159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22122F6C2080E11700609159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22122F712080E11800609159 /* mastodonTimeLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mastodonTimeLineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22122F752080E11800609159 /* mastodonTimeLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mastodonTimeLineTests.swift; sourceTree = "<group>"; };
+		22122F772080E11800609159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22122F832080E20800609159 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		22122F852080E22100609159 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		22122F872080E46300609159 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		22D495FA20832A900003345F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		22D495FC2083452A0003345F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		22F2EBA2208109780049F22F /* TimeLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewModel.swift; sourceTree = "<group>"; };
+		22F2EBA42081E1300049F22F /* TimelineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineView.xib; sourceTree = "<group>"; };
+		22F2EBA82081FD190049F22F /* TimeLineCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCellViewModel.swift; sourceTree = "<group>"; };
+		22F2EBAA208220550049F22F /* TimeLineCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineCellView.xib; sourceTree = "<group>"; };
+		22F2EBAC208220680049F22F /* TimeLineCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCellView.swift; sourceTree = "<group>"; };
+		22F2EBB120824C980049F22F /* StatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
+		22F2EBB3208254720049F22F /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		22F2EBB7208257170049F22F /* StatusHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusHeaderCell.xib; sourceTree = "<group>"; };
+		22F2EBB9208257260049F22F /* StatusHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHeaderCell.swift; sourceTree = "<group>"; };
+		22F2EBBB208257420049F22F /* StatusMediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusMediaCell.xib; sourceTree = "<group>"; };
+		22F2EBBD2082575B0049F22F /* StatusMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMediaCell.swift; sourceTree = "<group>"; };
+		22F2EBBF20826E000049F22F /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		22F2EBC2208324A90049F22F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		22F2EBC4208325700049F22F /* Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convert.swift; sourceTree = "<group>"; };
+		2A8003504B006D88E0604BA0 /* Pods-mastodonTimeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastodonTimeLineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mastodonTimeLineTests/Pods-mastodonTimeLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		40ED92264288F8381B744818 /* Pods-mastodonTimeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastodonTimeLineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mastodonTimeLineTests/Pods-mastodonTimeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B79081F554B49759C5397FD /* Pods_mastodonTimeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mastodonTimeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE71B4C6ED697AA326AF3C0 /* Pods-mastodonTimeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastodonTimeLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mastodonTimeLine/Pods-mastodonTimeLine.debug.xcconfig"; sourceTree = "<group>"; };
+		FC98C6B95A2A79FE4CBCEF36 /* Pods-mastodonTimeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastodonTimeLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-mastodonTimeLine/Pods-mastodonTimeLine.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22122F572080E11700609159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C126A79ED1F41F62FA0706 /* Pods_mastodonTimeLine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22122F6E2080E11800609159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BA3A5E7A59E2B1CE2AA98C8 /* Pods_mastodonTimeLineTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22122F512080E11700609159 = {
+			isa = PBXGroup;
+			children = (
+				22122F5C2080E11700609159 /* mastodonTimeLine */,
+				22122F742080E11800609159 /* mastodonTimeLineTests */,
+				22122F5B2080E11700609159 /* Products */,
+				2B0B3E2D0C6D7CABFA166367 /* Pods */,
+				45450699427123FD0EE081E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22122F5B2080E11700609159 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22122F5A2080E11700609159 /* mastodonTimeLine.app */,
+				22122F712080E11800609159 /* mastodonTimeLineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22122F5C2080E11700609159 /* mastodonTimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				22F2EBC1208324980049F22F /* Extensions */,
+				22F2EBB020823B4E0049F22F /* Services */,
+				22122F822080E1C100609159 /* View */,
+				22122F812080E1B200609159 /* ViewModel */,
+				22122F802080E1AB00609159 /* Model */,
+				22122F5D2080E11700609159 /* AppDelegate.swift */,
+				22122F672080E11700609159 /* Assets.xcassets */,
+				22122F612080E11700609159 /* Main.storyboard */,
+				22122F692080E11700609159 /* LaunchScreen.storyboard */,
+				22122F6C2080E11700609159 /* Info.plist */,
+				22122F642080E11700609159 /* mastodonTimeLine.xcdatamodeld */,
+			);
+			path = mastodonTimeLine;
+			sourceTree = "<group>";
+		};
+		22122F742080E11800609159 /* mastodonTimeLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				22122F752080E11800609159 /* mastodonTimeLineTests.swift */,
+				22122F772080E11800609159 /* Info.plist */,
+			);
+			path = mastodonTimeLineTests;
+			sourceTree = "<group>";
+		};
+		22122F802080E1AB00609159 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22122F832080E20800609159 /* Status.swift */,
+				22122F872080E46300609159 /* Account.swift */,
+				22F2EBBF20826E000049F22F /* Attachment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22122F812080E1B200609159 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22F2EBA2208109780049F22F /* TimeLineViewModel.swift */,
+				22F2EBA82081FD190049F22F /* TimeLineCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22122F822080E1C100609159 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22F2EBB5208256B90049F22F /* TimeLine */,
+				22F2EBB6208256C40049F22F /* Status */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22F2EBB020823B4E0049F22F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				22122F852080E22100609159 /* NetworkService.swift */,
+				22F2EBC4208325700049F22F /* Convert.swift */,
+				22D495FC2083452A0003345F /* API.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		22F2EBB5208256B90049F22F /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				22122F5F2080E11700609159 /* TimelineView.swift */,
+				22F2EBA42081E1300049F22F /* TimelineView.xib */,
+				22F2EBAA208220550049F22F /* TimeLineCellView.xib */,
+				22F2EBAC208220680049F22F /* TimeLineCellView.swift */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		22F2EBB6208256C40049F22F /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				22F2EBB120824C980049F22F /* StatusView.xib */,
+				22F2EBB3208254720049F22F /* StatusView.swift */,
+				22F2EBB7208257170049F22F /* StatusHeaderCell.xib */,
+				22F2EBB9208257260049F22F /* StatusHeaderCell.swift */,
+				22F2EBBB208257420049F22F /* StatusMediaCell.xib */,
+				22F2EBBD2082575B0049F22F /* StatusMediaCell.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		22F2EBC1208324980049F22F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22F2EBC2208324A90049F22F /* Date.swift */,
+				22D495FA20832A900003345F /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B0B3E2D0C6D7CABFA166367 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EE71B4C6ED697AA326AF3C0 /* Pods-mastodonTimeLine.debug.xcconfig */,
+				FC98C6B95A2A79FE4CBCEF36 /* Pods-mastodonTimeLine.release.xcconfig */,
+				40ED92264288F8381B744818 /* Pods-mastodonTimeLineTests.debug.xcconfig */,
+				2A8003504B006D88E0604BA0 /* Pods-mastodonTimeLineTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45450699427123FD0EE081E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0895EEE6531B717A8C3FF893 /* Pods_mastodonTimeLine.framework */,
+				4B79081F554B49759C5397FD /* Pods_mastodonTimeLineTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22122F592080E11700609159 /* mastodonTimeLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22122F7A2080E11800609159 /* Build configuration list for PBXNativeTarget "mastodonTimeLine" */;
+			buildPhases = (
+				A54A3D6D08B39923929D695D /* [CP] Check Pods Manifest.lock */,
+				22122F562080E11700609159 /* Sources */,
+				22122F572080E11700609159 /* Frameworks */,
+				22122F582080E11700609159 /* Resources */,
+				AED74133A463B36857845283 /* [CP] Embed Pods Frameworks */,
+				194CD42E752DD499A458E768 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mastodonTimeLine;
+			productName = mastodonTimeLine;
+			productReference = 22122F5A2080E11700609159 /* mastodonTimeLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22122F702080E11800609159 /* mastodonTimeLineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22122F7D2080E11800609159 /* Build configuration list for PBXNativeTarget "mastodonTimeLineTests" */;
+			buildPhases = (
+				E271BCC5FB1009BDDBBA0D47 /* [CP] Check Pods Manifest.lock */,
+				22122F6D2080E11800609159 /* Sources */,
+				22122F6E2080E11800609159 /* Frameworks */,
+				22122F6F2080E11800609159 /* Resources */,
+				B564E6F42E8BADCE0C75094B /* [CP] Embed Pods Frameworks */,
+				F154B2162AD077D5313CF5C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22122F732080E11800609159 /* PBXTargetDependency */,
+			);
+			name = mastodonTimeLineTests;
+			productName = mastodonTimeLineTests;
+			productReference = 22122F712080E11800609159 /* mastodonTimeLineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22122F522080E11700609159 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = VolkovaKatie;
+				TargetAttributes = {
+					22122F592080E11700609159 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					22122F702080E11800609159 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22122F592080E11700609159;
+					};
+				};
+			};
+			buildConfigurationList = 22122F552080E11700609159 /* Build configuration list for PBXProject "mastodonTimeLine" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22122F512080E11700609159;
+			productRefGroup = 22122F5B2080E11700609159 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22122F592080E11700609159 /* mastodonTimeLine */,
+				22122F702080E11800609159 /* mastodonTimeLineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22122F582080E11700609159 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F2EBBC208257420049F22F /* StatusMediaCell.xib in Resources */,
+				22F2EBB8208257170049F22F /* StatusHeaderCell.xib in Resources */,
+				22F2EBB220824C980049F22F /* StatusView.xib in Resources */,
+				22122F6B2080E11700609159 /* LaunchScreen.storyboard in Resources */,
+				22F2EBAB208220550049F22F /* TimeLineCellView.xib in Resources */,
+				22122F682080E11700609159 /* Assets.xcassets in Resources */,
+				22122F632080E11700609159 /* Main.storyboard in Resources */,
+				22F2EBA52081E1300049F22F /* TimelineView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22122F6F2080E11800609159 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		194CD42E752DD499A458E768 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mastodonTimeLine/Pods-mastodonTimeLine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A54A3D6D08B39923929D695D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mastodonTimeLine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AED74133A463B36857845283 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mastodonTimeLine/Pods-mastodonTimeLine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mastodonTimeLine/Pods-mastodonTimeLine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B564E6F42E8BADCE0C75094B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mastodonTimeLineTests/Pods-mastodonTimeLineTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E271BCC5FB1009BDDBBA0D47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mastodonTimeLineTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F154B2162AD077D5313CF5C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mastodonTimeLineTests/Pods-mastodonTimeLineTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22122F562080E11700609159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22122F862080E22100609159 /* NetworkService.swift in Sources */,
+				22F2EBC5208325700049F22F /* Convert.swift in Sources */,
+				22122F662080E11700609159 /* mastodonTimeLine.xcdatamodeld in Sources */,
+				22122F602080E11700609159 /* TimelineView.swift in Sources */,
+				22122F5E2080E11700609159 /* AppDelegate.swift in Sources */,
+				22F2EBB4208254720049F22F /* StatusView.swift in Sources */,
+				22F2EBBA208257260049F22F /* StatusHeaderCell.swift in Sources */,
+				22F2EBC020826E000049F22F /* Attachment.swift in Sources */,
+				22122F842080E20800609159 /* Status.swift in Sources */,
+				22F2EBAD208220680049F22F /* TimeLineCellView.swift in Sources */,
+				22F2EBC3208324A90049F22F /* Date.swift in Sources */,
+				22F2EBBE2082575B0049F22F /* StatusMediaCell.swift in Sources */,
+				22F2EBA3208109780049F22F /* TimeLineViewModel.swift in Sources */,
+				22122F882080E46300609159 /* Account.swift in Sources */,
+				22D495FB20832A900003345F /* String.swift in Sources */,
+				22D495FD2083452A0003345F /* API.swift in Sources */,
+				22F2EBA92081FD190049F22F /* TimeLineCellViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22122F6D2080E11800609159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22122F762080E11800609159 /* mastodonTimeLineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22122F732080E11800609159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22122F592080E11700609159 /* mastodonTimeLine */;
+			targetProxy = 22122F722080E11800609159 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22122F612080E11700609159 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22122F622080E11700609159 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22122F692080E11700609159 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22122F6A2080E11700609159 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22122F782080E11800609159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22122F792080E11800609159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22122F7B2080E11800609159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE71B4C6ED697AA326AF3C0 /* Pods-mastodonTimeLine.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = mastodonTimeLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mastodonTimeLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22122F7C2080E11800609159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC98C6B95A2A79FE4CBCEF36 /* Pods-mastodonTimeLine.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = mastodonTimeLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mastodonTimeLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22122F7E2080E11800609159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40ED92264288F8381B744818 /* Pods-mastodonTimeLineTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5LUW8D6JFT;
+				INFOPLIST_FILE = mastodonTimeLineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mastodonTimeLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mastodonTimeLine.app/mastodonTimeLine";
+			};
+			name = Debug;
+		};
+		22122F7F2080E11800609159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8003504B006D88E0604BA0 /* Pods-mastodonTimeLineTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5LUW8D6JFT;
+				INFOPLIST_FILE = mastodonTimeLineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mastodonTimeLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mastodonTimeLine.app/mastodonTimeLine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22122F552080E11700609159 /* Build configuration list for PBXProject "mastodonTimeLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22122F782080E11800609159 /* Debug */,
+				22122F792080E11800609159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22122F7A2080E11800609159 /* Build configuration list for PBXNativeTarget "mastodonTimeLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22122F7B2080E11800609159 /* Debug */,
+				22122F7C2080E11800609159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22122F7D2080E11800609159 /* Build configuration list for PBXNativeTarget "mastodonTimeLineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22122F7E2080E11800609159 /* Debug */,
+				22122F7F2080E11800609159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		22122F642080E11700609159 /* mastodonTimeLine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22122F652080E11700609159 /* mastodonTimeLine.xcdatamodel */,
+			);
+			currentVersion = 22122F652080E11700609159 /* mastodonTimeLine.xcdatamodel */;
+			path = mastodonTimeLine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 22122F522080E11700609159 /* Project object */;
+}
